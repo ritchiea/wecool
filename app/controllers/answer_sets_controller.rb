@@ -1,4 +1,4 @@
-class AnswerSetController < ApplicationController
+class AnswerSetsController < ApplicationController
 
   def create
     @answer_set = AnswerSet.new(survey_params)

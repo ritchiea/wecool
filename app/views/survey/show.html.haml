@@ -1,32 +1,75 @@
-.row.top
+.row.content-primary
   .col-xs-12.col-md-8.col-md-offset-2
     = form_for @answer_set do |f|
       .form-group
-        = label_tag "Name"
+        = f.label :name, "Name"
         = f.text_field :name, class: "form-control"
       .form-group
-        = label_tag "Email"
-        = f.text_field :email, class: "form-control"
+        = f.label :email, "Email"
+        = f.email_field :email, class: "form-control"
       .form-group
-        = label_tag "Location"
+        = f.label :location, "Location"
         = f.text_field :location, class: "form-control"
       .form-group
-        = label_tag "Age"
+        = f.label :age, "Age"
         = f.number_field :age, class: "form-control small"
       .form-group
-        = label_tag "Why do you support Trump?"
-        = f.text_area :why_do_you_support_trump, class: "form-control"
+        = f.label :why_do_you_support_trump, "Why do you support Trump?"
+        = f.text_area :why_do_you_support_trump, class: "form-control", rows: 5
       .form-group
-        = label_tag "What do you think of Bernie?"
-        = f.text_area :what_do_you_think_of_bernie, class: "form-control"
+        = f.label :what_do_you_think_of_bernie, "What do you think of Bernie?"
+        = f.text_area :what_do_you_think_of_bernie, class: "form-control", rows: 5
       .form-group
-        = label_tag "What do you think of Hillary?"
-        = f.text_area :what_do_you_think_of_hillary, class: "form-control"
+        = f.label :what_do_you_think_of_hillary, "What do you think of Hillary?"
+        = f.text_area :what_do_you_think_of_hillary, class: "form-control", rows: 5
       .form-group
-        = label_tag "Are things worse off for white Americans than they used to be?"
+        = f.label :are_things_worse_off_for_whites, "Are things worse off for white Americans than they used to be?"
         = f.radio_button :are_things_worse_off_for_whites, true, class: "form-control"
+        = f.label :are_things_worse_off_for_whites, "Yes"
         = f.radio_button :are_things_worse_off_for_whites, false, class: "form-control"
+        = f.label :are_things_worse_off_for_whites, "No"
       .form-group
-        = label_tag "Are things worse off for non-white Americans than they used to be?"
+        = f.label :are_things_worse_off_for_nonwhites, "Are things worse off for non-white Americans than they used to be?"
         = f.radio_button :are_things_worse_off_for_nonwhites, true, class: "form-control"
+        = f.label :are_things_worse_off_for_nonwhites, "Yes"
         = f.radio_button :are_things_worse_off_for_nonwhites, false, class: "form-control"
+        = f.label :are_things_worse_off_for_nonwhites, "No"
+      .form-group
+        = f.label :do_you_think_politics_have_been_bought, "Do you think our political system has been bought?"
+        = f.radio_button :do_you_think_politics_have_been_bought, true, class: "form-control"
+        = f.label :do_you_think_politics_have_been_bought, "Yes"
+        = f.radio_button :do_you_think_politics_have_been_bought, false, class: "form-control"
+        = f.label :do_you_think_politics_have_been_bought, "No"
+
+      .form-group
+        = f.label :what_does_the_establishment_mean_to_you, 'What does "The Establishment" mean to you?'
+        = f.text_area :what_does_the_establishment_mean_to_you, class: "form-control", rows: 5
+
+      .form-group
+        = f.label :what_percentage_of_america_is_white, "What percentage of America is white?"
+        = f.text_field :what_percentage_of_america_is_white, class: "form-control small"
+
+      .form-group
+        = f.label :what_do_you_think_of_trumps_wall, "What do you think of the wall Trump wants to build between us and Mexico?"
+        = f.text_area :what_do_you_think_of_trumps_wall, class: "form-control", rows: 5
+
+      .form-group
+        = f.label :do_you_have_brown_friends, "Do you have Muslim or Mexican friends/family? Are you worried about how they'll be treated during a Trump presidency?"
+        = f.text_area :do_you_have_brown_friends, class: "form-control", rows: 5
+
+      .form-group
+        = f.label :agree_to_quote, "Do you agree with the statement \"I respect and celebrate differences and commonalities between people.\""
+        = f.radio_button :agree_to_quote, true, class: "form-control"
+        = f.label :agree_to_quote, "Yes"
+        = f.radio_button :agree_to_quote, false, class: "form-control"
+        = f.label :agree_to_quote, "No"
+
+      .form-group
+        = f.label :trump_or_bill, "Last question! Who do you think is better for women and/or fingerblasting: Trump or Bill Clinton?"
+        = f.radio_button :trump_or_bill, "Bill", class: "form-control"
+        = f.label :trump_or_bill, "Bill"
+        = f.radio_button :trump_or_bill, "The Donald", class: "form-control"
+        = f.label :trump_or_bill, "The Donald"
+
+      .form-group
+        = f.submit "Submit", class: "btn btn-primary btn-lg"
