@@ -2,18 +2,6 @@
   .col-xs-12.col-md-8.col-md-offset-2
     = form_for @answer_set do |f|
       .form-group
-        = f.label :name, "Name"
-        = f.text_field :name, class: "form-control"
-      .form-group
-        = f.label :email, "Email"
-        = f.email_field :email, class: "form-control"
-      .form-group
-        = f.label :location, "Location"
-        = f.text_field :location, class: "form-control"
-      .form-group
-        = f.label :age, "Age"
-        = f.number_field :age, class: "form-control small"
-      .form-group
         = f.label :why_do_you_support_trump, "Why do you support Trump?"
         = f.text_area :why_do_you_support_trump, class: "form-control", rows: 5
       .form-group
@@ -70,6 +58,19 @@
         = f.label :trump_or_bill, "Bill"
         = f.radio_button :trump_or_bill, "The Donald", class: "form-control"
         = f.label :trump_or_bill, "The Donald"
+
+      .form-group
+        = f.label :name, "Name (optional)"
+        = f.text_field :name, class: "form-control"
+      .form-group
+        = f.label :email, "Email (optional)"
+        = f.email_field :email, class: "form-control"
+      .form-group
+        = f.label :location, "Location (optional)"
+        = f.text_field :location, class: "form-control"
+      .form-group
+        = f.label :age, "Age (optional)"
+        = f.number_field :age, class: "form-control small"
 
       .form-group
         = f.submit "Submit", class: "btn btn-primary btn-lg"
