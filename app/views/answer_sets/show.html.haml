@@ -1,0 +1,59 @@
+.row.content-primary
+  .col-xs-12.col-md-8.col-md-offset-2
+    .form-group
+      = label_tag :name, "Name (optional)"
+      %p= @answer_set.name
+    .form-group
+      = label_tag :email, "Email (optional)"
+      %p= @answer_set.email
+    .form-group
+      = label_tag :location, "Location (optional)"
+      %p= @answer_set.location
+    .form-group
+      = label_tag :age, "Age (optional)"
+      %p= @answer_set.age
+
+    .form-group
+      = label_tag :why_do_you_support_trump, "Why do you support Trump?"
+      %p= @answer_set.why_do_you_support_trump
+    .form-group
+      = label_tag :what_do_you_think_of_bernie, "What do you think of Bernie Sanders?"
+      %p= @answer_set.what_do_you_think_of_bernie
+    .form-group
+      = label_tag :what_do_you_think_of_hillary, "What do you think of Hillary Clinton?"
+      %p= @answer_set.what_do_you_think_of_hillary
+    .form-group
+      = label_tag :are_things_worse_off_for_whites, "Are things worse off for white Americans than they used to be?"
+      %p= @answer_set.are_things_worse_off_for_whites ? "Yes" : "No"
+    .form-group
+      = label_tag :are_things_worse_off_for_nonwhites, "Are things worse off for non-white Americans than they used to be?"
+      %p= @answer_set.are_things_worse_off_for_nonwhites ? "Yes" : "No"
+    .form-group
+      = label_tag :do_you_think_politics_have_been_bought, "Do you think our political system has been bought?"
+      = @answer_set.do_you_think_politics_have_been_bought ? "Yes" : "No"
+
+    .form-group
+      = label_tag :what_does_the_establishment_mean_to_you, 'What does "The Establishment" mean to you?'
+      %p= @answer_set.what_does_the_establishment_mean_to_you
+
+    .form-group
+      = label_tag :what_percentage_of_america_is_white, "What percentage of America is white?"
+      %p= @answer_set.what_percentage_of_america_is_white
+
+    .form-group
+      = label_tag :what_do_you_think_of_trumps_wall, "What do you think of the wall Trump wants to build between us and Mexico?"
+      %p= @answer_set.what_do_you_think_of_trumps_wall
+
+    .form-group
+      = label_tag :do_you_have_brown_friends, "Do you have Muslim or Mexican friends/family? Are you worried about how they'll be treated during a Trump presidency?"
+      %p= @answer_set.do_you_have_brown_friends
+
+    .form-group
+      = label_tag :agree_to_quote, "Do you agree with the statement \"I respect and celebrate differences and commonalities between people.\""
+      %p= @answer_set.agree_to_quote ? "Yes" : "No"
+
+    .form-group
+      = label_tag :trump_or_bill, "Last question! Who do you think is better for women and/or fingerblasting: Trump or Bill Clinton?"
+      %p= @answer_set.trump_or_bill
+
+

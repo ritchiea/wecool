@@ -1,4 +1,5 @@
 class AnswerSetsController < ApplicationController
+  http_basic_authenticate_with name: "acr", password: "secret", only: :show
 
   def create
     @answer_set = AnswerSet.new(survey_params)
@@ -7,6 +8,10 @@ class AnswerSetsController < ApplicationController
     else
       render "survey/show"
     end
+  end
+
+  def show
+    @answer_set = AnswerSet.find params[:id]
   end
 
   private
